@@ -9,6 +9,8 @@ package com.bridgelabz.day7;
            GamblerProgram gambler = new GamblerProgram();
            gambler.UC1();
            gambler.UC2();
+            gambler.UC3();
+
 
         }
     //UC1
@@ -30,6 +32,26 @@ package com.bridgelabz.day7;
                 startingTotalAmount=startingTotalAmount-1;
                 System.out.println("After loosing the game your total amount is:"+startingTotalAmount);
             }
+    }
+    public void UC3() {
+        while(startingTotalAmount>50 && startingTotalAmount<150) {
+            double winOrLoose = Math.floor(Math.random() * 10) % 2;
+            if (betsPerGame == winOrLoose) {
+                System.out.println("you won the game");
+                startingTotalAmount = startingTotalAmount + 1;
+                System.out.println("After winning the game your total amount is:" + startingTotalAmount);
+            } else {
+                System.out.println("you loose the game");
+                startingTotalAmount = startingTotalAmount - 1;
+                System.out.println("After loosing the game your total amount is:" + startingTotalAmount);
+            }
+            if (startingTotalAmount == 50) {
+                System.out.println("Today you loose your 50% amount so you have to resign for the day");
+            } else {
+                System.out.println("Today you won your 50% amount so you have to resign for the day");
+            }
+        }
+
     }
 
 }
