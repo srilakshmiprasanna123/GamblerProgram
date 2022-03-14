@@ -1,7 +1,8 @@
 package com.bridgelabz.day7;
 
+import java.util.Scanner;
 
-    public class GamblerProgram {
+public class GamblerProgram {
         public static int startingTotalAmount = 100;
         public static final int betsPerGame = 1;
         public static int totalAmount = 0;
@@ -15,10 +16,7 @@ package com.bridgelabz.day7;
             gambler.UC4();
             gambler.UC5();
             gambler.UC6();
-
-
-
-
+            gambler.UC7();
 
         }
 
@@ -182,5 +180,21 @@ package com.bridgelabz.day7;
             }
             System.out.println("In a Month" + daysWon + "days won and" + daysLoss + "days lost");
         }
+        public void UC7() {
 
-    }
+            System.out.println("Do you want to play??? press 1 for yes and 0 for no");
+            Scanner sc= new Scanner(System.in);
+            int a= sc.nextInt();
+
+            if (a==1){
+                    System.out.println("lets play");
+                }
+                else{
+                    System.out.println("thanks for playing");
+                }
+            }
+
+        }
+
+
+
